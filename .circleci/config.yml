@@ -7,5 +7,6 @@ jobs:
             - LANG: C.UTF-8
     steps:
       - checkout
-      - name: Checking for credentials or tokens in code
-      - run: bash <(curl -s https://raw.githubusercontent.com/Zaulao/gitleaks-ci/master/gitleaks.sh)
+      - run: 
+          name: Checking for credentials or tokens in code
+          command: bash <(curl -s https://raw.githubusercontent.com/Zaulao/gitleaks-ci/master/gitleaks.sh)
