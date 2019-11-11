@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  GitLeaks:
     docker:
         - image: ruby:2.4.0
           environment:

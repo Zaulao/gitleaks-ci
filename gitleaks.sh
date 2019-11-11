@@ -10,8 +10,6 @@ else [ ! -z $CIRCLE_PR_NUMBER ]
     REPO_SLUG=$CIRCLE_PROJECT_USERNAME"/"$CIRCLE_PROJECT_REPONAME
 fi
 
-echo "TOKEN:" $GITHUB_API_TOKEN
-
 PRDIFF=$(curl -u $GITHUB_USERNAME:$GITHUB_API_TOKEN \
      -H 'Accept: application/vnd.github.VERSION.diff' \
      https://api.github.com/repos/$REPO_SLUG/pulls/$PR)
